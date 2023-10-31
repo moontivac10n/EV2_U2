@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Formulario Tecnologias WEB</title>
+</head>
+
+<body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="./assets/img/logo_cft_estatal.jpeg" alt="logo_cft" width="100px" height="80px">
+            <a class="navbar-brand" href="#">Material</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Estudiantes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Actividades</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Informe de notas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Unidad 1</a></li>
+                            <li><a class="dropdown-item" href="#">Unidad 2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Unidad 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"></a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulario  -->
+    <div class="container mt-4 mx-auto">
+        <h1 class="text-center">CALCULA TU PROMEDIO FINAL</h1>
+        <form id="calcular_promedio">
+            <div class="form-group">
+                <label for="nombre">NOMBRE COMPLETO:</label>
+                <input type="text" class="form-control" id="nombre" required>
+                <div class="invalid-feedback">Nombre es requerido.</div>
+                <div class="valid-feedback">Nombre es valido</div>
+            </div>
+            <div class="form-group">
+                <label for="asignatura">ASIGNATURA:</label>
+                <input type="text" class="form-control" id="asignatura" required>
+                <div class="invalid-feedback">Asignatura es requerido.</div>
+                <div class="valid-feedback">Asignatura válida.</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Unidad 1</h2>
+                    <div class="form-group">
+                        <label for="nota1">Nota 1:</label>
+                        <input type="number" class="form-control" id="nota1" required>
+                        <div class="invalid-feedback">Nota 1 es requerido.</div>
+                        <div class="valid-feedback">Nota 1 es valido.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nota2">Nota 2:</label>
+                        <input type="number" class="form-control" id="nota2" required>
+                        <div class="invalid-feedback">Nota 2 es requerido.</div>
+                        <div class="valid-feedback">Nota 2 es valido.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2>Unidad 2</h2>
+                    <div class="form-group">
+                        <label for="nota3">Nota 3:</label>
+                        <input type="number" class="form-control" id="nota3" required>
+                        <div class="invalid-feedback">Nota 3 es requerido.</div>
+                        <div class="valid-feedback">Nota 3 es valido.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nota4">Nota 4:</label>
+                        <input type="number" class="form-control" id="nota4" required>
+                        <div class="invalid-feedback">Nota 4 es requerido.</div>
+                        <div class="valid-feedback">Nota 4 es valido.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2>Unidad 3</h2>
+                    <div class="form-group">
+                        <label for="nota5">Nota 5:</label>
+                        <input type="number" class="form-control" id="nota5" required>
+                        <div class="invalid-feedback">Nota 5 es requerido.</div>
+                        <div class="valid-feedback">Nota 5 es valido.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nota6">Nota 6:</label>
+                        <input type="number" class="form-control" id="nota6" required>
+                        <div class="invalid-feedback">Nota 6 es requerido.</div>
+                        <div class="valid-feedback">Nota 6 es valido.</div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">CALCULAR PROMEDIO</button>
+        </form>
+    </div>
+
+
+    <div class="container mt-4 mx-auto" id="caja_final" style="display: none;">
+        <b><h2 class="informe_notas">Informe de notas</h2></b>
+        <p>Nombre Completo: <span id="informe_nombre"></span></p>
+        <p>Asignatura: <span id="informe_asignatura"></span></p>
+        <table class="tabla_final">
+            <thead>
+                <tr>
+                    <th>Unidad</th>
+                    <th>Nota 1</th>
+                    <th>Ponderación</th>
+                    <th>Nota 2</th>
+                    <th>Ponderación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Unidad 1</td>
+                    <td id="resultado_nota1"></td>
+                    <td id="resultado_ponderacion1"></td>
+                    <td id="resultado_nota2"></td>
+                    <td id="resultado_ponderacion2"></td>
+                </tr>
+                <tr>
+                    <td>Unidad 2</td>
+                    <td id="resultado_nota3"></td>
+                    <td id="resultado_ponderacion3"></td>
+                    <td id="resultado_nota4"></td>
+                    <td id="resultado_ponderacion4"></td>
+                </tr>
+                <tr>
+                    <td>Unidad 3</td>
+                    <td id="resultado_nota5"></td>
+                    <td id="resultado_ponderacion5"></td>
+                    <td id="resultado_nota6"></td>
+                    <td id="resultado_ponderacion6"></td>
+                </tr>
+            </tbody>
+        </table>
+        <b><p>Promedio Final: <span id="promedio_final"></span></p></b>
+        <b><p id="mensaje_final"></p></b>
+    </div>
+
+
+</body>
+
+<script src="./assets/js/calcular_promedio.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</html>

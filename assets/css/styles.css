@@ -1,0 +1,59 @@
+body {
+    font-family: "Comic Sans MS";
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHOzt9mvZ7fvmrAYZ8Y3Nc_zUGF2-BGNSq5X5dwlUanw&s);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.caja {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.unit {
+    margin-bottom: 20px;
+}
+
+#calcular_promedio {
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.result {
+    display: none;
+    margin-top: 20px;
+}
+
+.tabla_final {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid black;
+}
+#caja_final {
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.informe_notas {
+    text-align: center;
+}
+
+.img_formulario {
+    text-align: left;
+    margin-top: 20%;
+}
